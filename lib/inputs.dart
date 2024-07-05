@@ -15,7 +15,7 @@ class Input extends StatelessWidget {
         '/password-inputs': (context) => PasswordInputsPage(),
         '/capture-values': (context) => CaptureValuesPage(),
         '/calendar-input': (context) => CalendarInputPage(),
-        '/': (context) => Inputs(),
+  
       },
     );
   }

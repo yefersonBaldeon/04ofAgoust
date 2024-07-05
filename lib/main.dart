@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/avatar.dart';
 import 'package:flutter_application_2/draw.dart';
-import 'package:flutter_application_2/inputs.dart'; // Asegúrate de importar inputs.dart
+import 'package:flutter_application_2/first_alert.dart';
+import 'package:flutter_application_2/inputs.dart';
+import 'package:flutter_application_2/second_alert.dart'; // Asegúrate de importar inputs.dart
 
 void main() => runApp(MyApp());
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => MyList(),
         '/avatar': (context) => AvatarPage(),
         '/alert': (context) => AlertPage(),
-        '/alert2': (context) => Alert2Page(),
+        '/alert2': (context) => AlertPage2(),
         '/inputs': (context) => Input(),
         '/drawer_stack': (context) => DrawerYStackPage(),
       },
@@ -56,42 +58,4 @@ class MyList extends StatelessWidget {
   }
 }
 
-class AlertPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Alert Page'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      body: Center(
-        child: Text('Detalle de Alert'),
-      ),
-    );
-  }
-}
 
-class Alert2Page extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Alert2 Page'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      body: Center(
-        child: Text('Detalle de Alert2'),
-      ),
-    );
-  }
-}
